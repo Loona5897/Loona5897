@@ -1,0 +1,231 @@
+local library = loadstring(game:HttpGet(('https://raw.githubusercontent.com/AikaV3rm/UiLib/master/Lib.lua')))()
+
+local Credits = library:CreateWindow("Credits")
+local Customs = library:CreateWindow("Customs")
+local Attacks = library:CreateWindow("Custom ATKS")
+local Editor = library:CreateWindow("Char Editor")
+local troll = library:CreateWindow("Char troll/extras")
+
+local Open = Credits:CreateFolder("Open Me")
+local Normal = Customs:CreateFolder("Normal Chars")
+local Special = Customs:CreateFolder("Special Chars")
+local Admin = Customs:CreateFolder("Admin Chars")
+local Other = Customs:CreateFolder("Other Chars")
+local ATKSS = Attacks:CreateFolder("ATKS")
+local UIEditor = Editor:CreateFolder("UI Editor")
+local Universal = troll:CreateFolder("Universal")
+local Chara = troll:CreateFolder("GTChara")
+local Betty = troll:CreateFolder("Betty")
+local Frisk = troll:CreateFolder("Frisk")
+
+Open:Label("Credits",{
+    TextSize = 15; 
+    TextColor = Color3.fromRGB(255,255,255);
+    BgColor = Color3.fromRGB(0,0,0); 
+    
+}) 
+Open:Label("Infeeno#6836 - Owner",{
+    TextSize = 15; 
+    TextColor = Color3.fromRGB(255,255,255);
+    BgColor = Color3.fromRGB(0,0,0); 
+    
+}) 
+Open:Label("Shinichi Dreemurr#9727 - Scripter",{
+    TextSize = 13; 
+    TextColor = Color3.fromRGB(255,255,255);
+    BgColor = Color3.fromRGB(0,0,0); 
+    
+}) 
+Open:Label("Toby Fox#3104 - Scripter",{
+    TextSize = 15; 
+    TextColor = Color3.fromRGB(255,255,255);
+    BgColor = Color3.fromRGB(0,0,0); 
+    
+}) 
+Open:Label("lopviii/Лопви#9967 - Scripter",{
+    TextSize = 15; 
+    TextColor = Color3.fromRGB(255,255,255);
+    BgColor = Color3.fromRGB(0,0,0); 
+    
+}) 
+Open:Label("Outside Of Diego's World YT#3279 - Tester",{
+    TextSize = 10; 
+    TextColor = Color3.fromRGB(255,255,255);
+    BgColor = Color3.fromRGB(0,0,0); 
+    
+}) 
+
+Normal:Button("Keybind Delete",function()
+    game.Players.LocalPlayer:GetMouse():Destroy()
+end)
+Normal:Button("Adolf Hitler",function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/FilledWIthDetermination/Sakuya-But-Free-/main/Adolf_Hitler.lua", true))()
+end)
+Normal:Button("Dark Lord",function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/FilledWIthDetermination/Sakuya-But-Free-/main/Dark%20Lord.lua", true))()
+end)
+Normal:Button("TrueBadTimeSans",function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/FilledWIthDetermination/FilledWithScripts/main/SansBadTime.lua", true))()
+end)
+Special:Button("Keybind Delete",function()
+    game.Players.LocalPlayer:GetMouse():Destroy()
+end)
+Special:Button("BunnyDreemurr",function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/FilledWIthDetermination/Sakuya-But-Free-/main/BunnyDreemurr.lua", true))()
+end)
+Admin:Button("Keybind Delete",function()
+    game.Players.LocalPlayer:GetMouse():Destroy()
+end)
+Admin:Button("IDK",function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/FilledWIthDetermination/Sakuya-But-Free-/main/IDK.lua", true))()
+end)
+Other:Button("Keybind Delete",function()
+    game.Players.LocalPlayer:GetMouse():Destroy()
+end)
+Other:Button("The True God V7",function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/FilledWIthDetermination/Sakuya-But-Free-/main/Real-6.lua", true))()
+end)
+Other:Button("Dust Trust Sans",function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/FilledWIthDetermination/Sakuya-But-Free-/main/Dusttrust.lua", true))()
+end)
+
+ATKSS:Button("NaN Damage",function()
+local args = {
+    [1] = getrenv()._G.Pass, 
+    [2] = game:service("Players").LocalPlayer.Backpack.Main.LockOnScript.LockOn.Value,
+    [3] = {
+        ["Type"] = "Knockback",
+        ["HitEffect"] = "LightHitEffect3",
+        ["HurtAnimation"] = game:GetService("ReplicatedStorage").Animations.HurtAnimations.Knockback1,
+        ["Velocity"] = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 0 + Vector3.new(0,0,0),
+        ["CameraShake"] = "Bump",
+        ["CombatInv"] = true,
+        ["HitTime"] = 0,
+        ["Sound"] = game:GetService("ReplicatedStorage").Sounds.GroundHit,
+        ["Damage"] = "nan"
+    }
+}
+
+game:GetService("ReplicatedStorage").Remotes.Damage:InvokeServer(unpack(args))
+end)
+ATKSS:Button("Freeze",function()
+local args = {
+[1] = getrenv()._G.Pass,
+[2] = game:service("Players").LocalPlayer.Backpack.Main.LockOnScript.LockOn.Value,
+[3] = {
+  ["Type"] = "Knockback",
+  ["HitEffect"] = "LightHitEffect3",
+  ["HurtAnimation"] = game:GetService("ReplicatedStorage").Animations.HurtAnimations.Knockback2,
+  ["HitTime"] = 1,
+  ["Sound"] = game:GetService("ReplicatedStorage").Sounds.GroundHit,
+  ["Damage"] = 0
+  }
+}
+game:GetService("ReplicatedStorage").Remotes.Damage:InvokeServer(unpack(args))
+local char = game.Players.LocalPlayer.Character
+local clone = script:Clone()
+clone.Parent = char 
+end)
+ATKSS:Button("Fling",function()
+local args = {
+[1] = getrenv()._G.Pass,
+[2] = game:service("Players").LocalPlayer.Backpack.Main.LockOnScript.LockOn.Value,
+[3] = {
+  ["Type"] = "Knockback",
+  ["HitEffect"] = "LightHitEffect3",
+  ["HurtAnimation"] = game:GetService("ReplicatedStorage").Animations.HurtAnimations.Knockback2,
+  ["HitTime"] = 1,
+  ["Sound"] = game:GetService("ReplicatedStorage").Sounds.GroundHit,
+  ["Damage"] = 0
+  }
+}
+game:GetService("ReplicatedStorage").Remotes.Damage:InvokeServer(unpack(args))
+local char = game.Players.LocalPlayer.Character
+local clone = script:Clone()
+clone.Parent = char 
+wait(0.1)
+local args = {
+    [1] = getrenv()._G.Pass, 
+    [2] = game:service("Players").LocalPlayer.Backpack.Main.LockOnScript.LockOn.Value,
+    [3] = {
+        ["Type"] = "Normal",
+        ["HitEffect"] = "LightHitEffect3",
+        ["HurtAnimation"] = game:GetService("ReplicatedStorage").Animations.HurtAnimations.Knockback1,
+        ["Velocity"] = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 0 + Vector3.new(0,0.0,0),
+        ["CameraShake"] = "Bump",
+        ["CombatInv"] = true,
+        ["HitTime"] = 1,
+        ["Sound"] = game:GetService("ReplicatedStorage").Sounds.GroundHit,
+        ["Damage"] = 0
+    }
+}
+
+game:GetService("ReplicatedStorage").Remotes.Damage:InvokeServer(unpack(args))
+end)
+ATKSS:Button("Instant Char Selection",function()
+local args = {
+[1] = getrenv()._G.Pass,
+[2] = game:service("Players").LocalPlayer.Backpack.Main.LockOnScript.LockOn.Value,
+[3] = {
+  ["Type"] = "Knockback",
+  ["HitEffect"] = "LightHitEffect3",
+  ["HurtAnimation"] = game:GetService("ReplicatedStorage").Animations.HurtAnimations.Knockback2,
+  ["HitTime"] = 1,
+  ["Sound"] = game:GetService("ReplicatedStorage").Sounds.GroundHit,
+  ["Damage"] = 0
+  }
+}
+game:GetService("ReplicatedStorage").Remotes.Damage:InvokeServer(unpack(args))
+local char = game.Players.LocalPlayer.Character
+local clone = script:Clone()
+clone.Parent = char 
+wait(0.1)
+local args = {
+    [1] = getrenv()._G.Pass, 
+    [2] = game:service("Players").LocalPlayer.Backpack.Main.LockOnScript.LockOn.Value,
+    [3] = {
+        ["Type"] = "Normal",
+        ["HitEffect"] = "LightHitEffect3",
+        ["HurtAnimation"] = game:GetService("ReplicatedStorage").Animations.HurtAnimations.Knockback1,
+        ["Velocity"] = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 0 + Vector3.new(0,-199,0),
+        ["CameraShake"] = "Bump",
+        ["CombatInv"] = true,
+        ["HitTime"] = 1,
+        ["Sound"] = game:GetService("ReplicatedStorage").Sounds.GroundHit,
+        ["Damage"] = 0
+    }
+}
+
+game:GetService("ReplicatedStorage").Remotes.Damage:InvokeServer(unpack(args))
+end)
+
+UIEditor:ColorPicker("StaminaBar ColorPicker",Color3.fromRGB(255,0,0),function(color)
+    game.Players.LocalPlayer.PlayerGui.UI.Ui.StaminaBar.Bar.BackgroundColor3 = Color3.new(color)
+end)
+UIEditor:ColorPicker("ManaBar ColorPicker",Color3.fromRGB(255,0,0),function(color)
+    game.Players.LocalPlayer.PlayerGui.UI.Ui.ManaBar.Bar.BackgroundColor3 = Color3.new(color)
+end)
+UIEditor:ColorPicker("HealthBar ColorPicker",Color3.fromRGB(255,0,0),function(color)
+    game.Players.LocalPlayer.character.Head.HealthBar.Frame.BackgroundColor3 = Color3.new(color)
+end)
+UIEditor:Box("Attack Edit /Non FE","Number",function(value)
+    game.Players.LocalPlayer.PlayerGui.UI.Ui.Info.Attack.Text = value
+end)
+UIEditor:Box("Defense Edit /Non FE","Number",function(value)
+    game.Players.LocalPlayer.PlayerGui.UI.Ui.Info.Defense.Text = value
+end)
+UIEditor:Box("Pname Edit /Non FE","Number",function(value)
+    game.Players.LocalPlayer.character.Head.HealthBar.Frame.PName.Text = value
+end)
+UIEditor:Button("Delete SettingsButton",function()
+    game.Players.LocalPlayer.PlayerGui.UI.Ui.SettingsButton:Destroy()
+end)
+UIEditor:Button("Delete UpdateLog",function()
+    game.Players.LocalPlayer.PlayerGui.UI.Ui.UpdateLog:Destroy()
+end)
+UIEditor:Button("Delete 1-8 Attack UI",function()
+    game.Players.LocalPlayer.PlayerGui.UI.Ui.MoveDebounceShower:Destroy()
+end)
+UIEditor:Button("Delete Stamina Image",function()
+    game.Players.LocalPlayer.PlayerGui.UI.Ui.StaminaBar.ImageLabel:Destroy()
+end)
