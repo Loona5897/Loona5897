@@ -64,8 +64,3 @@ local Section = Tab:NewSection("Dragon Ball Warriors")
 Section:NewButton("Dragon Ball Warrior", "Unknown", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Loona5897/Loona5897/main/Small%20Code"))()
 end)
-
-if Game.PlaceId 3177438863 then
-    Section:NewButton("Dragon Blox Auto Farm", "Fun", function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/ArkxKing/Sg/main/DragonBlox"))()
-    end)
