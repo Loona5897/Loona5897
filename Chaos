@@ -1,0 +1,144 @@
+--REMINDER I DIDN'T MAKE THIS SCRIPT I DON'T KNOW WHO DID IT WHOEVER WHO MADE IT CREDITS TO HIM/HER GIVE CREDITS TO THE CREATOR
+
+--SCRIPT:
+
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local Hitbox = Instance.new("TextButton")
+local Gamepass = Instance.new("TextButton")
+local fly = Instance.new("TextButton")
+local speedsonic = Instance.new("TextButton")
+local TextLabel_2 = Instance.new("TextLabel")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ScreenGui.ResetOnSpawn = false
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(47, 47, 47)
+Frame.Position = UDim2.new(0.218826383, 0, 0.14314115, 0)
+Frame.Size = UDim2.new(0, 438, 0, 277)
+Frame.Active = true
+Frame.Draggable = true
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.Size = UDim2.new(0, 438, 0, 35)
+TextLabel.Font = Enum.Font.SourceSansBold
+TextLabel.Text = "Chaos Gui Script"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 26.000
+TextLabel.TextWrapped = true
+
+Hitbox.Name = "Hitbox"
+Hitbox.Parent = Frame
+Hitbox.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Hitbox.Position = UDim2.new(0.0547945164, 0, 0.193650797, 0)
+Hitbox.Size = UDim2.new(0, 164, 0, 50)
+Hitbox.Font = Enum.Font.SourceSansBold
+Hitbox.Text = "HITBOX"
+Hitbox.TextColor3 = Color3.fromRGB(255, 255, 255)
+Hitbox.TextScaled = true
+Hitbox.TextSize = 14.000
+Hitbox.TextWrapped = true
+Hitbox.MouseButton1Down:connect(function()
+	_G.HeadSize = 20
+	_G.Disabled = true
+
+	game:GetService('RunService').RenderStepped:connect(function()
+		if _G.Disabled then
+			for i,v in next, game:GetService('Players'):GetPlayers() do
+				if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+					pcall(function()
+						v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
+						v.Character.HumanoidRootPart.Transparency = 0.7
+						v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really blue")
+						v.Character.HumanoidRootPart.Material = "Neon"
+						v.Character.HumanoidRootPart.CanCollide = false
+					end)
+				end
+			end
+		end
+	end)
+end)
+
+Gamepass.Name = "Gamepass"
+Gamepass.Parent = Frame
+Gamepass.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Gamepass.Position = UDim2.new(0.570776224, 0, 0.193650797, 0)
+Gamepass.Size = UDim2.new(0, 164, 0, 50)
+Gamepass.Font = Enum.Font.SourceSansBold
+Gamepass.Text = "FREE GAMEPASS!!!!"
+Gamepass.TextColor3 = Color3.fromRGB(255, 255, 255)
+Gamepass.TextScaled = true
+Gamepass.TextSize = 14.000
+Gamepass.TextWrapped = true
+Gamepass.MouseButton1Down:connect(function()
+	if game.CreatorType == Enum.CreatorType.User then
+		game.Players.LocalPlayer.UserId = game.CreatorId
+	end
+	if game.CreatorType == Enum.CreatorType.Group then
+		game.Players.LocalPlayer.UserId = game:GetService("GroupService"):GetGroupInfoAsync(game.CreatorId).Owner.Id
+	end
+end)
+
+fly.Name = "fly (patched)"
+fly.Parent = Frame
+fly.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+fly.Position = UDim2.new(0.0547944903, 0, 0.596825421, 0)
+fly.Size = UDim2.new(0, 164, 0, 50)
+fly.Font = Enum.Font.SourceSansBold
+fly.Text = "Fly Press (E)"
+fly.TextColor3 = Color3.fromRGB(255, 255, 255)
+fly.TextScaled = true
+fly.TextSize = 14.000
+fly.TextWrapped = true
+fly.MouseButton1Down:connect(function()
+	-- Press "E" to fly and unfly
+	-- You have to re-apply the script if you die
+	loadstring(game:HttpGet("https://pastebin.com/raw/7rXZ9VNc", true))()
+end)
+
+speedsonic.Name = "speed sonic"
+speedsonic.Parent = Frame
+speedsonic.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+speedsonic.Position = UDim2.new(0.570776224, 0, 0.596825421, 0)
+speedsonic.Size = UDim2.new(0, 164, 0, 50)
+speedsonic.Font = Enum.Font.SourceSansBold
+speedsonic.Text = "Speed"
+speedsonic.TextColor3 = Color3.fromRGB(255, 255, 255)
+speedsonic.TextScaled = true
+speedsonic.TextSize = 14.000
+speedsonic.TextWrapped = true
+speedsonic.MouseButton1Down:connect(function()
+	speed = 1500 --16 is default
+
+	function onPlayerRespawned(character)
+		wait(1) --loading delay
+		local player = game.Players:GetPlayerFromCharacter(character)
+		local human = character:findFirstChild("Humanoid")
+		if player ~= nil and human ~= nil then
+			human.WalkSpeed = speed
+		end
+	end
+
+	game.Workspace.ChildAdded:connect(onPlayerRespawned)
+end)
+
+TextLabel_2.Parent = Frame
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.Position = UDim2.new(0, 0, 0.87189275, 0)
+TextLabel_2.Size = UDim2.new(0, 438, 0, 35)
+TextLabel_2.Font = Enum.Font.SourceSansBold
+TextLabel_2.Text = "Script Made By JJspolit93s"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextSize = 26.000
+TextLabel_2.TextWrapped = true
