@@ -57,6 +57,6 @@ end)
 
 local Tab = Window:NewTab("Dragon Type")
 local Section = Tab:NewSection("Dragon Ball Warriors")
-Section:NewButton("Dragon Ball Warrior", "Unknown", function()
+Section:NewButton("Dragon Ball Warrior", "SSJ INF", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Loona5897/Loona5897/main/Small%20Code"))()
 end)
