@@ -21,7 +21,7 @@ Section:NewButton("Pink GUI V3", "Currently Updated", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/zakater5/LuaRepo/main/YBA/v3.lua"))()
 end)
 Section:NewButton("NukHub", "A script with Other scripts for games", function()
-    _G.key = "black"
+    _G.key = "noreal"
     loadstring(game:HttpGet("https://raw.githubusercontent.com/NukeVsCity/TheALLHACKLoader/main/NukeLoader"))()
 end)
 
