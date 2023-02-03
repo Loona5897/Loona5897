@@ -1,4 +1,4 @@
-game:GetService("StarterGui"):SetCore("SendNotification", {Title = "Skidded By Div#0001", Text = "This HUB was skidded by Div#0001", Duration = 10})
+game:GetService("StarterGui"):SetCore("SendNotification", {Title = "Made by 🖤Francesca🖤#5978", Text = "This HUB was 🖤Francesca🖤#5897", Duration = 10})
 game:GetService("StarterGui"):SetCore("SendNotification", {Title = "This is a safe cracked version", Text = "Cracked by BlackWolfJR#0393", Duration = 10})
 game:GetService("StarterGui"):SetCore("SendNotification", {Title = "F1 to toggle the script.", Text = "", Duration = 10})
 
