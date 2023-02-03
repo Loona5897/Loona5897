@@ -1,11 +1,6 @@
--- Dragon Ball N Scripts By StrawBerry Jam#5897
--- NOTE I ALREADY MADE  A 6.5 VERISON And it reseted so imma add it soon 9/25/2021
--- Version: V5.0
--- U P D A T E S
--- Cooler Gui
--- For My Best Friend vance41510 :)
--- You may Need to Re-Press The Buttons When Death And Chars and Forms
--- PLEASE DONT CHANGE CREDITS!!
+-- Dragon Ball N Script is made by 🖤Francesca🖤#5897
+-- Version: V5.0 final version
+-- May need to re press buttons if you die.
 -- Instances:
 
 local ScreenGui = Instance.new("ScreenGui")
@@ -548,7 +543,7 @@ RefreshButton.Text = "Refresh Button"
 RefreshButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 RefreshButton.TextSize = 19.000
 RefreshButton.MouseButton1Down:Connect(function()
-	-- Not owned by me, Credits to the original owner
+	-- owned by me
 -- Press q to reset yourself
 -- Good for games that dont allows you to reset
 -- Xfer was here (T.V.K)
