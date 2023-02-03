@@ -1,7 +1,7 @@
-- 👋 Hi, I’m @Strawberry Jam
+- 👋 Hi, I’m @🖤Francesca🖤#2973
 - 👀 I’m interested in Making friends
 - 🌱 I’m currently learning the basics of everything
-- 📫 How to reach me:Through my discord at 🖤Strawberry Jam🖤#2973
+- 📫 How to reach me:Through my discord at 🖤Francesca🖤#2973
 - I don't take Credit for everything I have posted Anything that Has "My" or my name in it is mine
 
 <!---
